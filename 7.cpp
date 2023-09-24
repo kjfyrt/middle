@@ -5,7 +5,7 @@ int itc_rev_num(long long number){
     int sum = 0;
     while (number > 0) {
         if (number % 10 > 0) {
-            n++;
+            sum++;
         }
         number = number / 10;
     }

@@ -1,7 +1,7 @@
 #include <iostream>
 #include "middle.h"
 using namespace std;
-int itc_second_max_num(long long number){
+int itc_second_simple_max_num(long long number){
     int max = 0; int max2 = 0;
     if (number / 10 == 0){
         return -1;
@@ -15,6 +15,9 @@ int itc_second_max_num(long long number){
             max2 = number % 10;
         }
         number = number / 10;
+    }
+    if (max == max2) {
+        return -1;
     }
     return max2;
 }

@@ -3,6 +3,9 @@
 using namespace std;
 int itc_max_num(long long number){
     int b = 0, max = 0;
+    if (number < 0){
+        number = -number;
+    }
     while(number > 0){
         b = number%10;
         if (b > max){

@@ -3,11 +3,15 @@
 using namespace std;
 int itc_rev_num(long long number){
     int sum = 0;
-    while (number > 0) {
-        if (number % 10 > 0) {
-            sum++;
-        }
-        number = number / 10;
+    if (number < 0){
+        number = -number;
+    }
+    while (number%10 == 0){
+        number = number/10;
+    }
+    while (number > 0){
+        sum++;
+        number = number/10;
     }
     return sum;
 }

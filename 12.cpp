@@ -3,7 +3,10 @@
 using namespace std;
 int itc_second_simple_max_num(long long number){
     int max = 0; int max2 = 0;
-    if (number / 10 == 0){
+    if (number<0){
+        number = -number;
+    }
+    if (number <= 9){
         return -1;
     }
     while (number > 0){
@@ -21,3 +24,4 @@ int itc_second_simple_max_num(long long number){
     }
     return max2;
 }
+

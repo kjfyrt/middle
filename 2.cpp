@@ -3,8 +3,11 @@
 using namespace std;
 int itc_len_num(long long number){
     int b = 0;
+    if (number < 0){
+        number = -number;
+    }
     if (number == 0){
-        return -1;
+        return 1;
     }
     while(number > 0){
         b++;
@@ -13,3 +16,4 @@ int itc_len_num(long long number){
     return b;
 
 }
+

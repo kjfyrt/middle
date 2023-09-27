@@ -3,6 +3,9 @@
 using namespace std;
 int itc_min_num(long long number){
     int b, min = 10;
+    if (number < 0){
+        number = -number;
+    }
     if (number == 0){
         return 0;
     }

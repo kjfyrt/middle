@@ -3,6 +3,9 @@
 using namespace std;
 int itc_rev_num(long long number){
     int sum = 0;
+    if (number == 0){
+        return 1;
+    }
     if (number < 0){
         number = -number;
     }
